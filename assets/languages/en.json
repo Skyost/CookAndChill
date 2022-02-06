@@ -49,7 +49,7 @@
     "dialog_ingredients_ingredient_quantity": "Quantity",
 
     "recipe_editor_name": "Recipe title",
-    "recipe_editor_meal_count": "Maximum meal count",
+    "recipe_editor_max_meals": "Maximum meal count",
     "recipe_editor_recipe": "Recipe",
     "recipe_editor_recipe_hint": "● Mix eggs, flour and milk.\n● Add some sugar.\n● …",
     "recipe_editor_ingredients": "Ingredients",
