@@ -1,0 +1,62 @@
+{
+    "page_home_title": "My recipes",
+    "page_home_settings": "Settings",
+    "page_home_settings_theme": "Theme :",
+    "page_home_settings_theme_material": "Material",
+    "page_home_settings_theme_italian": "Italian",
+    "page_home_settings_theme_confirmation": "This will erase all your recipes, would you like to continue ?",
+    "page_home_settings_theme_export": "Export recipes",
+    "page_home_settings_theme_import": "Import recipes",
+
+    "page_recipe_add": "Add a recipe",
+    "page_recipe_edit": "Edit a recipe",
+
+    "page_menu_intro_title": "We're gonna make your menu !",
+    "page_menu_intro_message": "How many meals do you want to prepare ?",
+    "page_menu_intro_button": "Let's go !",
+
+    "page_menu_display_loading": "Loading...",
+    "page_menu_display_title": "Menu",
+    "page_menu_display_lunch": "Lunch",
+    "page_menu_display_diner": "Diner",
+    "page_menu_display_replace_recipe_title": "Replace recipe",
+    "page_menu_display_replace_recipe_empty": "You don't have added enough recipes in order to replace this one.",
+    "page_menu_display_ingredients_title": "Ingredients",
+    "page_menu_display_ingredients_empty": "No ingredient needed.",
+
+    "dialog_conditions_title": "Conditions",
+    "dialog_conditions_empty": "There's currently no condition.",
+    "dialog_conditions_add": "Add a condition",
+    "dialog_condition_condition_day_of_week": "This day only :",
+    "dialog_condition_condition_not_day_of_week": "Not this day :",
+    "dialog_condition_condition_lunch": "Lunch only",
+    "dialog_condition_condition_not_lunch": "Diner only",
+    "dialog_condition_condition_season": "This season only :",
+    "dialog_condition_condition_not_season": "Not this season :",
+
+    "dialog_condition_picker_title": "Pick the condition",
+    "dialog_condition_picker_season_spring": "Spring",
+    "dialog_condition_picker_season_summer": "Summer",
+    "dialog_condition_picker_season_autumn": "Autumn",
+    "dialog_condition_picker_season_winter": "Winter",
+
+    "dialog_image_picker_title": "Image",
+
+    "dialog_ingredients_title": "Ingredients",
+    "dialog_ingredients_empty": "There's currently no ingredient.",
+    "dialog_ingredients_add": "Add an ingredient",
+    "dialog_ingredients_ingredient_name": "Ingredient",
+    "dialog_ingredients_ingredient_quantity": "Quantity",
+
+    "recipe_editor_name": "Recipe title",
+    "recipe_editor_meal_count": "Maximum meal count",
+    "recipe_editor_recipe": "Recipe",
+    "recipe_editor_recipe_hint": "● Mix eggs, flour and milk.\n● Add some sugar.\n● …",
+    "recipe_editor_ingredients": "Ingredients",
+    "recipe_editor_ingredients_count": "{count} ingredient(s)",
+    "recipe_editor_conditions": "Conditions",
+    "recipe_editor_conditions_count": "{count} condition(s)",
+
+    "recipe_list_empty": "No recipe added.",
+    "recipe_list_subtitle": "{maxMeals} meal(s) max • {ingredientCount} ingredient(s)"
+}

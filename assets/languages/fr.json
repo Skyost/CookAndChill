@@ -1,0 +1,62 @@
+{
+    "page_home_title": "Mes recettes",
+    "page_home_settings": "Paramètres",
+    "page_home_settings_theme": "Thème :",
+    "page_home_settings_theme_material": "Material",
+    "page_home_settings_theme_italian": "Italien",
+    "page_home_settings_theme_confirmation": "Ceci écrasera toutes vos recettes, voulez-vous continuer ?",
+    "page_home_settings_theme_export": "Exporter les recettes",
+    "page_home_settings_theme_import": "Importer les recettes",
+
+    "page_recipe_add": "Ajouter une recette",
+    "page_recipe_edit": "Éditer une recette",
+
+    "page_menu_intro_title": "Nous allons confectionner votre menu !",
+    "page_menu_intro_message": "Combien de repas souhaitez-vous préparer ?",
+    "page_menu_intro_button": "C'est parti !",
+
+    "page_menu_display_loading": "Chargement...",
+    "page_menu_display_title": "Menu",
+    "page_menu_display_lunch": "Midi",
+    "page_menu_display_diner": "Soir",
+    "page_menu_display_replace_recipe_title": "Remplacer la recette",
+    "page_menu_display_replace_recipe_empty": "Vous n'avez pas assez de recette pour remplacer celle-ci.",
+    "page_menu_display_ingredients_title": "Ingrédients",
+    "page_menu_display_ingredients_empty": "Pas d'ingrédient requis.",
+
+    "dialog_conditions_title": "Conditions",
+    "dialog_conditions_empty": "Pas de condition pour le moment.",
+    "dialog_conditions_add": "Ajouter une condition",
+    "dialog_condition_condition_day_of_week": "Uniquement ce jour…",
+    "dialog_condition_condition_not_day_of_week": "Pas ce jour…",
+    "dialog_condition_condition_lunch": "Uniquement le midi",
+    "dialog_condition_condition_not_lunch": "Uniquement le soir",
+    "dialog_condition_condition_season": "Uniquement cette saison…",
+    "dialog_condition_condition_not_season": "Pas cette saison…",
+
+    "dialog_condition_picker_title": "Choisir la condition",
+    "dialog_condition_picker_season_spring": "Printemps",
+    "dialog_condition_picker_season_summer": "Été",
+    "dialog_condition_picker_season_autumn": "Automne",
+    "dialog_condition_picker_season_winter": "Hiver",
+
+    "dialog_image_picker_title": "Image",
+
+    "dialog_ingredients_title": "Ingrédients",
+    "dialog_ingredients_empty": "Pas d'ingrédient pour le moment.",
+    "dialog_ingredients_add": "Ajouter un ingrédient",
+    "dialog_ingredients_ingredient_name": "Ingrédient",
+    "dialog_ingredients_ingredient_quantity": "Quantité",
+
+    "recipe_editor_name": "Titre de la recette",
+    "recipe_editor_max_meals": "Nombre de repas maximum",
+    "recipe_editor_recipe": "Recette",
+    "recipe_editor_recipe_hint": "• Mélanger les œufs, la farine et le lait.\n• Ajouter du sucre.\n• …",
+    "recipe_editor_ingredients": "Ingrédients",
+    "recipe_editor_ingredients_count": "{count} ingrédient(s)",
+    "recipe_editor_conditions": "Conditions",
+    "recipe_editor_conditions_count": "{count} condition(s)",
+
+    "recipe_list_empty": "Pas de recette pour le moment.",
+    "recipe_list_subtitle": "{maxMeals} repas max • {ingredientCount} ingrédient(s)"
+}
