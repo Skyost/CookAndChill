@@ -1,13 +1,12 @@
 import 'package:cookandchill/model/menu_model.dart';
 import 'package:cookandchill/model/recipe_model.dart';
-import 'package:cookandchill/model/recipe.dart';
 import 'package:cookandchill/pages/menu/display.dart';
 import 'package:cookandchill/widgets/styled/app_bar.dart';
 import 'package:cookandchill/widgets/styled/background.dart';
 import 'package:ez_localization/ez_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 
 class MenuIntroPage extends StatelessWidget {
   static const String route = '/menu/intro';
@@ -90,7 +89,7 @@ class _MenuIntroPageBody extends StatelessWidget {
             spacing: 20,
             children: [
               IconButton(
-                onPressed: () => menuModel.changeMealCount(menuModel.mealCount - 1),
+                onPressed: () => menuModel.changeMealCount(menuModel.mealCount - 1, context.read<RecipeModel>()),
                 icon: const Icon(Icons.remove_circle_outline),
               ),
               Text(
@@ -99,7 +98,7 @@ class _MenuIntroPageBody extends StatelessWidget {
                 style: Theme.of(context).textTheme.headline4,
               ),
               IconButton(
-                onPressed: () => menuModel.changeMealCount(menuModel.mealCount + 1),
+                onPressed: () => menuModel.changeMealCount(menuModel.mealCount + 1, context.read<RecipeModel>()),
                 icon: const Icon(Icons.add_circle_outline),
               )
             ],

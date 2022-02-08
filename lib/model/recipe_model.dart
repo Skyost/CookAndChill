@@ -1,11 +1,5 @@
-import 'dart:convert';
-import 'dart:math';
-
-import 'package:cookandchill/model/storable_model.dart';
-import 'package:cookandchill/model/storage/storage.dart';
 import 'package:cookandchill/model/recipe.dart';
-import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+import 'package:cookandchill/model/storable_model.dart';
 
 class RecipeModel extends StorableModel {
   @override
@@ -28,9 +22,13 @@ class RecipeModel extends StorableModel {
     _recipes = result;
   }
 
-  Recipe? getRecipeByIndex(int index) => _recipes[index];
-
-  int getRecipeIndex(Recipe recipe) => _recipes.indexOf(recipe);
+  int get maxMealCount {
+    int result = 0;
+    for (Recipe recipe in _recipes) {
+      result += recipe.maxMeals;
+    }
+    return result;
+  }
 
   void addRecipe(Recipe recipe, {bool notify = true}) {
     if (!_recipes.contains(recipe)) {

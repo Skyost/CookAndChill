@@ -3,7 +3,6 @@ import 'dart:math';
 import 'package:cookandchill/model/recipe.dart';
 import 'package:cookandchill/model/recipe_model.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 class MenuModel with ChangeNotifier {
   Map<MealDateTime, Recipe>? _menu;
@@ -13,10 +12,13 @@ class MenuModel with ChangeNotifier {
 
   int get mealCount => _mealCount;
 
-  void changeMealCount(int mealCount, {bool notify = true}) {
-    _mealCount = mealCount;
-    if (notify) {
-      notifyListeners();
+  void changeMealCount(int mealCount, RecipeModel recipeModel, {bool notify = true}) {
+    _mealCount = min(max(1, mealCount), recipeModel.maxMealCount);
+    if (mealCount != _mealCount) {
+      _mealCount = mealCount;
+      if (notify) {
+        notifyListeners();
+      }
     }
   }
 
@@ -41,6 +43,7 @@ class MenuModel with ChangeNotifier {
   }
 
   void craftMenu(RecipeModel recipeModel, {bool notify = true}) {
+    int mealCount = min(recipeModel.maxMealCount, _mealCount);
     List<Recipe> recipes = recipeModel.recipes;
     Map<MealDateTime, Recipe> result = {};
 
@@ -114,8 +117,8 @@ class MenuModel with ChangeNotifier {
 }
 
 class MealDateTime with Comparable<MealDateTime> {
-  static const _lunch_hour = 11;
-  static const _diner_hour = 23;
+  static const _lunchHour = 11;
+  static const _dinerHour = 23;
 
   final int year;
   final int month;
@@ -155,7 +158,7 @@ class MealDateTime with Comparable<MealDateTime> {
     return _season!;
   }
 
-  DateTime toDateTime() => DateTime(year, month, day, lunch ? _lunch_hour : _diner_hour);
+  DateTime toDateTime() => DateTime(year, month, day, lunch ? _lunchHour : _dinerHour);
 
   MealDateTime get next => MealDateTime.fromDate(toDateTime().add(const Duration(hours: 12)));
 
@@ -178,7 +181,7 @@ class MealDateTime with Comparable<MealDateTime> {
       return result;
     }
 
-    result = (lunch ? _lunch_hour : _diner_hour) - (other.lunch ? _lunch_hour : _diner_hour);
+    result = (lunch ? _lunchHour : _dinerHour) - (other.lunch ? _lunchHour : _dinerHour);
     if (result != 0) {
       return result;
     }

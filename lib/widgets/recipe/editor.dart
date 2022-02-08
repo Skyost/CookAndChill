@@ -1,4 +1,3 @@
-import 'package:cookandchill/model/conditions/condition.dart';
 import 'package:cookandchill/model/recipe.dart';
 import 'package:cookandchill/widgets/recipe/dialogs/conditions.dart';
 import 'package:cookandchill/widgets/recipe/dialogs/image_picker.dart';
@@ -6,7 +5,6 @@ import 'package:cookandchill/widgets/recipe/dialogs/ingredients.dart';
 import 'package:cookandchill/widgets/recipe/image.dart';
 import 'package:ez_localization/ez_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 class RecipeEditor extends StatelessWidget {
   final Recipe recipe;
@@ -55,7 +53,13 @@ class RecipeEditor extends StatelessWidget {
               ),
               keyboardType: TextInputType.number,
               initialValue: recipe.maxMeals.toString(),
-              onChanged: (value) => recipe.changeMaxMeals(int.tryParse(value) ?? 1, notify: false),
+              onChanged: (value) {
+                int? maxMeals = int.tryParse(value);
+                if (maxMeals == null || maxMeals < 1) {
+                  maxMeals = 1;
+                }
+                recipe.changeMaxMeals(maxMeals, notify: false);
+              },
             ),
           ),
           Padding(

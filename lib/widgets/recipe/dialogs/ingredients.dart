@@ -1,5 +1,5 @@
 import 'package:cookandchill/model/recipe.dart';
-import 'package:cookandchill/widgets/alert_dialog.dart';
+import 'package:cookandchill/widgets/dialogs/alert_dialog.dart';
 import 'package:ez_localization/ez_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';

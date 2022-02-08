@@ -3,15 +3,14 @@ import 'package:cookandchill/model/menu_model.dart';
 import 'package:cookandchill/model/recipe.dart';
 import 'package:cookandchill/model/recipe_model.dart';
 import 'package:cookandchill/utils/utils.dart';
-import 'package:cookandchill/widgets/alert_dialog.dart';
+import 'package:cookandchill/widgets/dialogs/alert_dialog.dart';
 import 'package:cookandchill/widgets/recipe/widget.dart';
 import 'package:cookandchill/widgets/styled/app_bar.dart';
 import 'package:cookandchill/widgets/styled/background.dart';
 import 'package:ez_localization/ez_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:intl/intl.dart';
 import 'package:lottie/lottie.dart';
+import 'package:provider/provider.dart';
 import 'package:sticky_headers/sticky_headers/widget.dart';
 
 class MenuDisplayPage extends StatelessWidget {

@@ -1,12 +1,6 @@
 {
     "page_home_title": "Mes recettes",
-    "page_home_settings": "Paramètres",
-    "page_home_settings_theme": "Thème :",
-    "page_home_settings_theme_material": "Material",
-    "page_home_settings_theme_italian": "Italien",
-    "page_home_settings_theme_confirmation": "Ceci écrasera toutes vos recettes, voulez-vous continuer ?",
-    "page_home_settings_theme_export": "Exporter les recettes",
-    "page_home_settings_theme_import": "Importer les recettes",
+    "page_home_not_enough_meals": "Il n'y a pas assez de repas pour faire un menu !",
 
     "page_recipe_add": "Ajouter une recette",
     "page_recipe_edit": "Éditer une recette",
@@ -23,6 +17,14 @@
     "page_menu_display_replace_recipe_empty": "Vous n'avez pas assez de recette pour remplacer celle-ci.",
     "page_menu_display_ingredients_title": "Ingrédients",
     "page_menu_display_ingredients_empty": "Pas d'ingrédient requis.",
+
+    "dialog_settings_title": "Paramètres",
+    "dialog_settings_theme": "Thème :",
+    "dialog_settings_theme_material": "Material",
+    "dialog_settings_theme_italian": "Italien",
+    "dialog_settings_theme_confirmation": "Ceci écrasera toutes vos recettes, voulez-vous continuer ?",
+    "dialog_settings_theme_export": "Exporter les recettes",
+    "dialog_settings_theme_import": "Importer les recettes",
 
     "dialog_conditions_title": "Conditions",
     "dialog_conditions_empty": "Pas de condition pour le moment.",

@@ -1,12 +1,6 @@
 {
     "page_home_title": "My recipes",
-    "page_home_settings": "Settings",
-    "page_home_settings_theme": "Theme :",
-    "page_home_settings_theme_material": "Material",
-    "page_home_settings_theme_italian": "Italian",
-    "page_home_settings_theme_confirmation": "This will erase all your recipes, would you like to continue ?",
-    "page_home_settings_theme_export": "Export recipes",
-    "page_home_settings_theme_import": "Import recipes",
+    "page_home_not_enough_meals": "You don't have enough meals in order to craft a menu !",
 
     "page_recipe_add": "Add a recipe",
     "page_recipe_edit": "Edit a recipe",
@@ -23,6 +17,14 @@
     "page_menu_display_replace_recipe_empty": "You don't have added enough recipes in order to replace this one.",
     "page_menu_display_ingredients_title": "Ingredients",
     "page_menu_display_ingredients_empty": "No ingredient needed.",
+
+    "dialog_settings_title": "Settings",
+    "dialog_settings_theme": "Theme :",
+    "dialog_settings_theme_material": "Material",
+    "dialog_settings_theme_italian": "Italian",
+    "dialog_settings_theme_confirmation": "This will erase all your recipes, would you like to continue ?",
+    "dialog_settings_theme_export": "Export recipes",
+    "dialog_settings_theme_import": "Import recipes",
 
     "dialog_conditions_title": "Conditions",
     "dialog_conditions_empty": "There's currently no condition.",
