@@ -64,20 +64,12 @@ class SettingsDialog extends StatelessWidget {
                 return;
               }
 
-              String? inputFile;
-              if (defaultTargetPlatform == TargetPlatform.windows || defaultTargetPlatform == TargetPlatform.macOS) {
-                FilePickerResult? result = await FilePicker.platform.pickFiles(
-                  type: FileType.custom,
-                  allowedExtensions: ['json'],
-                  lockParentWindow: true,
-                );
-                inputFile = result?.files.single.path;
-              } else {
-                inputFile = await FilePicker.platform.getDirectoryPath(lockParentWindow: true);
-                if (inputFile != null) {
-                  inputFile += 'recipes.json';
-                }
-              }
+              FilePickerResult? result = await FilePicker.platform.pickFiles(
+                type: FileType.custom,
+                allowedExtensions: ['json'],
+                lockParentWindow: true,
+              );
+              String? inputFile = result?.files.single.path;
 
               if (inputFile != null) {
                 try {
@@ -108,8 +100,9 @@ class SettingsDialog extends StatelessWidget {
               } else {
                 outputFile = await FilePicker.platform.getDirectoryPath(lockParentWindow: true);
                 if (outputFile != null) {
-                  outputFile += 'recipes.json';
+                  outputFile += (outputFile.endsWith('/') ? '' : '/') + 'recipes.json';
                 }
+                print(outputFile);
               }
               if (outputFile != null) {
                 if (!outputFile.endsWith('.json')) {

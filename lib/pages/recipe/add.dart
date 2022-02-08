@@ -8,15 +8,19 @@ import 'package:provider/provider.dart';
 class RecipeAddPage extends StatelessWidget {
   static const String route = '/recipe/add';
 
-  const RecipeAddPage({
+  final Recipe recipe;
+
+  RecipeAddPage({
     Key? key,
-  }) : super(
+    Recipe? recipe,
+  }) :  recipe = recipe ?? Recipe(),
+        super(
           key: key,
         );
 
   @override
-  Widget build(BuildContext context) => ChangeNotifierProvider<Recipe>(
-        create: (_) => Recipe(),
+  Widget build(BuildContext context) => ChangeNotifierProvider<Recipe>.value(
+        value: recipe,
         builder: (context, child) => Scaffold(
           appBar: StyledAppBar(
             titleKey: 'page_recipe_add',
