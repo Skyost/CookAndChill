@@ -22,7 +22,7 @@ class RecipeEditPage extends StatelessWidget {
         value: recipe,
         builder: (context, child) => WillPopScope(
           onWillPop: () async {
-            context.read<RecipeModel>().save(notify: false);
+            context.read<RecipeModel>().save();
             return true;
           },
           child: Scaffold(
