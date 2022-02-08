@@ -8,12 +8,17 @@ class MenuModel with ChangeNotifier {
   Map<MealDateTime, Recipe>? _menu;
   List<Ingredient>? _ingredients;
 
-  int _mealCount = 10;
+  int _mealCount = 1;
 
   int get mealCount => _mealCount;
 
   void changeMealCount(int mealCount, RecipeModel recipeModel, {bool notify = true}) {
-    _mealCount = min(max(1, mealCount), recipeModel.maxMealCount);
+    if (mealCount < 1) {
+      mealCount = 1;
+    }
+    if (mealCount > recipeModel.maxMealCount) {
+      mealCount = recipeModel.maxMealCount;
+    }
     if (mealCount != _mealCount) {
       _mealCount = mealCount;
       if (notify) {

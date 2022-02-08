@@ -53,7 +53,7 @@ class SettingsDialog extends StatelessWidget {
                       child: Text(MaterialLocalizations.of(context).cancelButtonLabel.toUpperCase()),
                     ),
                     TextButton(
-                      onPressed: () => Navigator.pop(context, false),
+                      onPressed: () => Navigator.pop(context, true),
                       child: Text(MaterialLocalizations.of(context).continueButtonLabel.toUpperCase()),
                     ),
                   ],
