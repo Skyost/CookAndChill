@@ -64,16 +64,25 @@ class SettingsDialog extends StatelessWidget {
                 return;
               }
 
-              FilePickerResult? result = await FilePicker.platform.pickFiles(
-                type: FileType.custom,
-                allowedExtensions: ['json'],
-                lockParentWindow: true,
-              );
+              String? inputFile;
+              if (defaultTargetPlatform == TargetPlatform.windows || defaultTargetPlatform == TargetPlatform.macOS) {
+                FilePickerResult? result = await FilePicker.platform.pickFiles(
+                  type: FileType.custom,
+                  allowedExtensions: ['json'],
+                  lockParentWindow: true,
+                );
+                inputFile = result?.files.single.path;
+              } else {
+                inputFile = await FilePicker.platform.getDirectoryPath(lockParentWindow: true);
+                if (inputFile != null) {
+                  inputFile += 'recipes.json';
+                }
+              }
 
-              if (result != null) {
+              if (inputFile != null) {
                 try {
                   RecipeModel model = context.read<RecipeModel>();
-                  await model.initialize(file: result.files.single.path);
+                  await model.initialize(file: inputFile);
                   await model.save();
                 } catch (ex) {
                   ScaffoldMessenger.of(context).showSnackBar(SnackBar(
@@ -128,7 +137,7 @@ class SettingsDialog extends StatelessWidget {
   }
 
   static Future<void> openDialog(BuildContext context) => showDialog(
-        builder: (context) => SettingsDialog(),
+        builder: (context) => const SettingsDialog(),
         context: context,
       );
 }
