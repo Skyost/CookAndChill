@@ -2,7 +2,6 @@ import 'package:cookandchill/model/conditions/day_of_week.dart';
 import 'package:cookandchill/model/conditions/lunch.dart';
 import 'package:cookandchill/model/conditions/season.dart';
 import 'package:cookandchill/model/menu_model.dart';
-import 'package:cookandchill/model/recipe_model.dart';
 
 abstract class Condition {
   static Condition? fromJson(Map<String, dynamic> json) {

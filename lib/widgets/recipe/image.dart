@@ -1,7 +1,6 @@
 import 'package:cookandchill/model/recipe.dart';
 import 'package:cookandchill/utils/utils.dart';
 import 'package:flutter/material.dart';
-import 'package:ez_localization/ez_localization.dart';
 import 'package:palette_generator/palette_generator.dart';
 
 class RecipeImage extends StatefulWidget {

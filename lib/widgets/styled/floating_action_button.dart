@@ -1,7 +1,5 @@
-import 'package:cookandchill/model/settings_model.dart';
 import 'package:cookandchill/widgets/styled/background.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 class StyledActionButton extends StatelessWidget {
   final Widget child;

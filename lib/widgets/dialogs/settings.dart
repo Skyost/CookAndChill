@@ -40,84 +40,85 @@ class SettingsDialog extends StatelessWidget {
         ),
       ],
       actions: [
-        TextButton(
-          onPressed: () async {
-            bool? confirmation = await showDialog<bool>(
-              context: context,
-              builder: (_) => AlertDialog(
-                content: Text(context.getString('dialog_settings_theme_confirmation')),
-                actions: [
-                  TextButton(
-                    onPressed: () => Navigator.pop(context, false),
-                    child: Text(MaterialLocalizations.of(context).cancelButtonLabel.toUpperCase()),
-                  ),
-                  TextButton(
-                    onPressed: () => Navigator.pop(context, false),
-                    child: Text(MaterialLocalizations.of(context).continueButtonLabel.toUpperCase()),
-                  ),
-                ],
-              ),
-            );
+        if (!kIsWeb)
+          TextButton(
+            onPressed: () async {
+              bool? confirmation = await showDialog<bool>(
+                context: context,
+                builder: (_) => AlertDialog(
+                  content: Text(context.getString('dialog_settings_confirmation')),
+                  actions: [
+                    TextButton(
+                      onPressed: () => Navigator.pop(context, false),
+                      child: Text(MaterialLocalizations.of(context).cancelButtonLabel.toUpperCase()),
+                    ),
+                    TextButton(
+                      onPressed: () => Navigator.pop(context, false),
+                      child: Text(MaterialLocalizations.of(context).continueButtonLabel.toUpperCase()),
+                    ),
+                  ],
+                ),
+              );
 
-            if (confirmation != true) {
-              return;
-            }
-
-            FilePickerResult? result = await FilePicker.platform.pickFiles(
-              type: FileType.custom,
-              allowedExtensions: ['json'],
-              lockParentWindow: true,
-            );
-
-            if (result != null) {
-              try {
-                RecipeModel model = context.read<RecipeModel>();
-                await model.initialize(file: result.files.single.path);
-                await model.save();
-              } catch (ex) {
-                ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                  content: Text(ex.toString()),
-                  backgroundColor: Colors.red[900],
-                ));
+              if (confirmation != true) {
+                return;
               }
-            }
-          },
-          child: Text(context.getString('dialog_settings_theme_import').toUpperCase()),
-        ),
-        TextButton(
-          onPressed: () async {
-            String? outputFile;
-            if (defaultTargetPlatform == TargetPlatform.windows || defaultTargetPlatform == TargetPlatform.macOS) {
-              outputFile = await (FilePicker.platform.saveFile(
-                fileName: 'recipes',
-                allowedExtensions: ['json'],
+
+              FilePickerResult? result = await FilePicker.platform.pickFiles(
                 type: FileType.custom,
+                allowedExtensions: ['json'],
                 lockParentWindow: true,
-              ));
-            }
-            else {
-              outputFile = await FilePicker.platform.getDirectoryPath(lockParentWindow: true);
-              if (outputFile != null) {
-                outputFile += 'recipes.json';
+              );
+
+              if (result != null) {
+                try {
+                  RecipeModel model = context.read<RecipeModel>();
+                  await model.initialize(file: result.files.single.path);
+                  await model.save();
+                } catch (ex) {
+                  ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                    content: Text(ex.toString()),
+                    backgroundColor: Colors.red[900],
+                  ));
+                }
               }
-            }
-            if (outputFile != null) {
-              if (!outputFile.endsWith('.json')) {
-                outputFile += '.json';
-              }
-              try {
-                context.read<RecipeModel>().save(file: outputFile);
-              } catch (ex) {
-                ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                  content: Text(ex.toString()),
-                  backgroundColor: Colors.red[900],
+            },
+            child: Text(context.getString('dialog_settings_import').toUpperCase()),
+          ),
+        if (!kIsWeb)
+          TextButton(
+            onPressed: () async {
+              String? outputFile;
+              if (defaultTargetPlatform == TargetPlatform.windows || defaultTargetPlatform == TargetPlatform.macOS) {
+                outputFile = await (FilePicker.platform.saveFile(
+                  fileName: 'recipes',
+                  allowedExtensions: ['json'],
+                  type: FileType.custom,
+                  lockParentWindow: true,
                 ));
+              } else {
+                outputFile = await FilePicker.platform.getDirectoryPath(lockParentWindow: true);
+                if (outputFile != null) {
+                  outputFile += 'recipes.json';
+                }
               }
-            }
-            Navigator.pop(context);
-          },
-          child: Text(context.getString('dialog_settings_theme_export').toUpperCase()),
-        ),
+              if (outputFile != null) {
+                if (!outputFile.endsWith('.json')) {
+                  outputFile += '.json';
+                }
+                try {
+                  context.read<RecipeModel>().save(file: outputFile);
+                } catch (ex) {
+                  ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                    content: Text(ex.toString()),
+                    backgroundColor: Colors.red[900],
+                  ));
+                }
+              }
+              Navigator.pop(context);
+            },
+            child: Text(context.getString('dialog_settings_export').toUpperCase()),
+          ),
         TextButton(
           onPressed: () => Navigator.pop(context),
           child: Text(MaterialLocalizations.of(context).closeButtonLabel.toUpperCase()),

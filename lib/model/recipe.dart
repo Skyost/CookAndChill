@@ -2,7 +2,6 @@ import 'dart:math';
 
 import 'package:cookandchill/model/conditions/condition.dart';
 import 'package:cookandchill/model/menu_model.dart';
-import 'package:cookandchill/model/recipe_model.dart';
 import 'package:flutter/material.dart';
 
 class Recipe with ChangeNotifier {

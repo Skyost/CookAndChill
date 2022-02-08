@@ -22,9 +22,9 @@
     "dialog_settings_theme": "Theme :",
     "dialog_settings_theme_material": "Material",
     "dialog_settings_theme_italian": "Italian",
-    "dialog_settings_theme_confirmation": "This will erase all your recipes, would you like to continue ?",
-    "dialog_settings_theme_export": "Export recipes",
-    "dialog_settings_theme_import": "Import recipes",
+    "dialog_settings_confirmation": "This will erase all your recipes, would you like to continue ?",
+    "dialog_settings_export": "Export recipes",
+    "dialog_settings_import": "Import recipes",
 
     "dialog_conditions_title": "Conditions",
     "dialog_conditions_empty": "There's currently no condition.",

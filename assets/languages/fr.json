@@ -22,9 +22,9 @@
     "dialog_settings_theme": "Thème :",
     "dialog_settings_theme_material": "Material",
     "dialog_settings_theme_italian": "Italien",
-    "dialog_settings_theme_confirmation": "Ceci écrasera toutes vos recettes, voulez-vous continuer ?",
-    "dialog_settings_theme_export": "Exporter les recettes",
-    "dialog_settings_theme_import": "Importer les recettes",
+    "dialog_settings_confirmation": "Ceci écrasera toutes vos recettes, voulez-vous continuer ?",
+    "dialog_settings_export": "Exporter les recettes",
+    "dialog_settings_import": "Importer les recettes",
 
     "dialog_conditions_title": "Conditions",
     "dialog_conditions_empty": "Pas de condition pour le moment.",

@@ -1,6 +1,5 @@
 import 'package:cookandchill/model/conditions/condition.dart';
 import 'package:cookandchill/model/menu_model.dart';
-import 'package:flutter/material.dart';
 
 class SeasonCondition with Condition {
   static const id = 'season';

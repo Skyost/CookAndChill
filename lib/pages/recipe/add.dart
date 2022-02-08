@@ -1,9 +1,7 @@
-import 'package:cookandchill/model/recipe_model.dart';
 import 'package:cookandchill/model/recipe.dart';
+import 'package:cookandchill/model/recipe_model.dart';
 import 'package:cookandchill/widgets/recipe/editor.dart';
 import 'package:cookandchill/widgets/styled/app_bar.dart';
-import 'package:cookandchill/widgets/styled/background.dart';
-import 'package:ez_localization/ez_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

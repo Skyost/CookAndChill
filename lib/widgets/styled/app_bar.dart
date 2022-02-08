@@ -1,8 +1,6 @@
-import 'package:cookandchill/model/settings_model.dart';
 import 'package:cookandchill/widgets/styled/background.dart';
 import 'package:ez_localization/ez_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 class StyledAppBar extends StatelessWidget with PreferredSizeWidget {
   final String? titleKey;

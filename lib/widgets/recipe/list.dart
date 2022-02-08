@@ -1,6 +1,4 @@
 import 'package:cookandchill/model/recipe.dart';
-import 'package:cookandchill/pages/recipe/edit.dart';
-import 'package:cookandchill/widgets/recipe/image.dart';
 import 'package:cookandchill/widgets/recipe/widget.dart';
 import 'package:ez_localization/ez_localization.dart';
 import 'package:flutter/material.dart';

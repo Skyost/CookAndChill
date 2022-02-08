@@ -1,7 +1,5 @@
 import 'package:cookandchill/model/conditions/condition.dart';
 import 'package:cookandchill/model/menu_model.dart';
-import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
 
 class DayOfWeekCondition with Condition {
   static const id = 'dayOfWeek';
