@@ -35,6 +35,7 @@ class RecipeEditPage extends StatelessWidget {
                     RecipeModel model = context.read<RecipeModel>();
                     model.removeRecipe(context.read<Recipe>());
                     Navigator.pop(context);
+                    model.save(notify: false);
                   },
                 ),
               ],

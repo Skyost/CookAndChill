@@ -18,7 +18,7 @@ class RecipeModel extends StorableModel {
       recipe.addListener(notifyListeners);
       result.add(recipe);
     }
-    result.sort((recipeA, recipeB) => recipeA.name.compareTo(recipeB.name));
+    result.sort();
     _recipes = result;
   }
 
@@ -34,6 +34,7 @@ class RecipeModel extends StorableModel {
     if (!_recipes.contains(recipe)) {
       recipe.addListener(notifyListeners);
       _recipes.add(recipe);
+      _recipes.sort();
       if (notify) {
         notifyListeners();
       }

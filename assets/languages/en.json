@@ -59,6 +59,8 @@
     "recipe_editor_conditions": "Conditions",
     "recipe_editor_conditions_count": "{count} condition(s)",
 
+    "recipe_list_search": "Search a recipe…",
+    "recipe_list_not_found": "No recipe found !",
     "recipe_list_empty": "No recipe added.",
     "recipe_list_subtitle": "{maxMeals} meal(s) max • {ingredientCount} ingredient(s)"
 }

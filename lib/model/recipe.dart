@@ -4,7 +4,7 @@ import 'package:cookandchill/model/conditions/condition.dart';
 import 'package:cookandchill/model/menu_model.dart';
 import 'package:flutter/material.dart';
 
-class Recipe with ChangeNotifier {
+class Recipe with Comparable<Recipe>, ChangeNotifier {
   String _image;
   String _name;
   int _maxMeals;
@@ -143,6 +143,9 @@ class Recipe with ChangeNotifier {
         'conditions': _conditions.map((condition) => condition.toJson()).toList(),
         'recipe': _recipe,
       };
+
+  @override
+  int compareTo(Recipe other) => name.compareTo(other.name);
 }
 
 class Ingredient with Comparable<Ingredient> {

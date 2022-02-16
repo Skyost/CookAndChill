@@ -59,6 +59,8 @@
     "recipe_editor_conditions": "Conditions",
     "recipe_editor_conditions_count": "{count} condition(s)",
 
+    "recipe_list_search": "Rechercher une recette…",
+    "recipe_list_not_found": "Pas de recette trouvée !",
     "recipe_list_empty": "Pas de recette pour le moment.",
     "recipe_list_subtitle": "{maxMeals} repas max • {ingredientCount} ingrédient(s)"
 }

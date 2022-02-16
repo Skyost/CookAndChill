@@ -31,8 +31,8 @@ class RecipeConditionsDialog extends StatelessWidget {
           padding: const EdgeInsets.only(bottom: 20),
           child: _RecipeConditionWidget(
             condition: condition,
+            onChanged: recipe.notifyListeners,
             onDelete: () => recipe.removeCondition(condition),
-            onChanged: () => recipe.notifyListeners,
           ),
         ),
     ],
