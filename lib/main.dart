@@ -76,7 +76,7 @@ class CookAndChillApp extends StatelessWidget {
         initialRoute: HomePage.route,
         routes: {
           HomePage.route: (context) => const HomePage(),
-          RecipeAddPage.route: (context) => const RecipeAddPage(),
+          RecipeAddPage.route: (context) => RecipeAddPage(),
           RecipeEditPage.route: (context) {
             Recipe? recipe = ModalRoute.of(context)?.settings.arguments as Recipe?;
             if (recipe == null) {
