@@ -113,6 +113,7 @@ class _RecipeListState extends State<RecipeList> {
   @override
   void dispose() {
     textEditingController.dispose();
+    scrollController.dispose();
     super.dispose();
   }
 
